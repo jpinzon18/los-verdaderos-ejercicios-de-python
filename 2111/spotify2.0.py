@@ -1,9 +1,9 @@
 # ejercicio de spotify continuado el 21 de noviembre juan E Pinzon
 spotify={
-    'cancion':'a',
-    'fecha de publicacion':'x',
-    'artista':'y',
-    'duracion':'z' 
+    'cancion':'cancion ingresada',
+    'fecha de publicacion':'fecha en la que se publico la cancion ',
+    'artista':'artista que creo la cancion  ',
+    'duracion':'tiempo que dura la cancion ' 
 }
 
 def ingresar_can():
@@ -52,4 +52,7 @@ match ctrl:
      cap3=(input('ingrese 3 para dar ppt finalizado el programa '))
      if cap3 == 3:
          print('aqui acaba el programa')
+         
+         
+         
          

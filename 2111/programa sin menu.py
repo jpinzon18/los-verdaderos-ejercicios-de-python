@@ -16,7 +16,7 @@ def ingresar_can():
     spotify.update({'artista':art})
     spotify.update({'duracion':dur})
     #return cancion
-    #restun de arriba cancelado 
+    
 
 
 ingresar_can()
@@ -36,3 +36,4 @@ def listafav():
 listafav()
 
 print(spotify)
+
