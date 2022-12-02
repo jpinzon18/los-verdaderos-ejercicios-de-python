@@ -11,8 +11,8 @@ while numero !=0:
     i=i+1
     print("numero",i,":",end="")
     numero=eval(input())
-    print(numero)
-    suma=suma+numero
+    if numero%i==0:
+       print('el numero  es par')
     
 print("la suma de los numeros es: ",suma)
     
