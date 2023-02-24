@@ -52,7 +52,4 @@ match ctrl:
      cap3=(input('ingrese 3 para dar ppt finalizado el programa '))
      if cap3 == 3:
          print('aqui acaba el programa')
-         
-         
-         
-         
+        
