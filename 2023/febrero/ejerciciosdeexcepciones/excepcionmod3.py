@@ -9,10 +9,5 @@ try:
 except NameError:
     print("No se invoco a la funcion correctamente")
 else:
-    def sumasimple2():
-     dig10=int(input("ingrese el primer digito: "))
-     dig20=int(input("ingrese el sefungo digito: "))
-     sum3=(dig10+dig20)
-     print ("el resultado es: ",sum3)
+    print("reinicie el programa")
 
- sumasimple2()
