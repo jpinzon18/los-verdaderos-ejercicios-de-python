@@ -1,6 +1,6 @@
-#class colores:
-   # pass
-#rosado=colores()
+'''class colores:
+    pass
+rosado=colores()'''
 
 stack = []
 
