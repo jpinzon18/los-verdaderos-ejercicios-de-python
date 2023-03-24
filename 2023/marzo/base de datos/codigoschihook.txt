@@ -1,0 +1,158 @@
+SELECT *
+FROM artists AS ART INNER JOIN
+albums AS ALB
+ON ART.ArtistId =
+ALB.AlbumId
+
+SELECT *
+FROM tracks AS TRA INNER JOIN
+genres AS GEN
+ON TRA.TrackId =
+GEN.GenreId
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Producto cartesiano.
+
+SELECT *
+FROM artists , albums
+WHERE artists.ArtistId = albums.AlbumId
+
+SELECT *
+FROM tracks , genres
+WHERE tracks.GenreId = genres.GenreId
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Combinación Interna – INNER JOIN
+
+SELECT *
+FROM artists AS ART INNER JOIN
+albums AS ALB
+ON ART.ArtistId =
+ALB.AlbumId
+
+SELECT *
+FROM tracks AS TRA INNER JOIN
+genres AS GEN
+ON TRA.TrackId =
+GEN.GenreId
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Combinaciones Externas – OUTER JOIN
+
+SELECT *
+FROM artists AS ART RIGHT/LEFT JOIN
+albums AS ALB
+ON ART.ArtistId =
+ALB.AlbumId
+
+SELECT *
+FROM tracks AS TRA RIGHT/LEFT JOIN
+genres AS GEN
+ON TRA.TrackId =
+GEN.GenreId
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Autocombinaciones – SELF JOIN
+
+SELECT *
+FROM artists AS ART INNER JOIN
+artists AS ARTI
+ON ART.ArtistId = ARTI.ArtistId
+
+SELECT *
+FROM tracks AS TRA INNER JOIN
+tracks AS TRAC
+ON TRA.TrackId = TRAC.TrackId
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Combinaciones de dos o más tablas
+
+SELECT *
+FROM artists AS ART INNER JOIN
+artists AS ARTI
+ON ART.ArtistId = ARTI.ArtistId INNER JOIN
+tracks AS TRA ON ART.ArtistId =
+ARTI.ArtistId
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+La cláusula GROUP BY
+
+SELECT <Nombre_campos_grupo> , <constantes> ,
+<función_de_agregado>
+FROM <Nombre_tabla>
+WHERE <Condición>
+GROUP BY <Nombre_campos_grupo>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+La cláusula HAVING
+
+SELECT <Nombre_campos_grupo> , <constantes> ,
+<función_de_agregado>
+FROM <Nombre_tabla>
+WHERE <Condición>
+GROUP BY <Nombre_campos_grupo>
+HAVING <Condición sobre columnas calculadas>
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Funciones de agregado
+
+•SUM ( Expresión): Calcula la suma del conjunto de datos determinado
+por la expresión, estos deben ser de tipo numérico y el resultado será del
+mismo tipo.
+
+•MIN (Expresión): Obtiene el menor de los valores correspondientes con
+el conjunto de datos determinado por la expresión.
+
+SELECT MIN (ArtistId)
+FROM artists
+
+SELECT MIN (Milliseconds)
+FROM tracks
+
+•MAX (Expresión): Obtiene el mayor de los valores correspondientes con
+el conjunto de datos determinado por la expresión.
+
+SELECT MAX (ArtistId)
+FROM artists
+
+SELECT MAX (Milliseconds)
+FROM tracks
+
+•AVG (Expresión): Calcula el valor promedio (media aritmética) del
+conjunto de datos determinado por la expresión, estos deben ser de tipo
+numérico y el resultado puede variar.
+
+SELECT AVG (TrackId)
+FROM tracks
+
+SELECT AVG (ArtistId)
+FROM artists
+
+•COUNT(campo): Calcula el número de filas (registros) que contiene
+información en el campo especificado
+
+SELECT COUNT (ArtistId)
+FROM artists
+
+SELECT COUNT (TrackId)
+FROM tracks
+
+•COUNT(*): Cuenta el número de registros (filas) resultantes en una
+consulta
+
+SELECT COUNT (*)
+FROM artists
+
+SELECT COUNT (*)
+FROM tracks
+
+
+

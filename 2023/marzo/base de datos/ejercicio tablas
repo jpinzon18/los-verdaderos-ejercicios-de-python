@@ -1,0 +1,65 @@
+CREATE DATABASE <Universidad>
+
+USE <Universidad>
+
+CREATE TABLE <Depártamento> (
+<nombreDep> <textarea>
+<Restricción>
+)
+
+CREATE TABLE <Universidad> (
+    <Nombre> <textarea>
+    <Restricción>,
+    <Ciudad> <textarea>
+    <Restricción>,
+)
+
+Create table Depártamento (
+MedNombres Char(50) Primary Key not null,
+ )
+
+
+Create table Universidad (
+ MedNombreDep Char(15) Primary Key not null,
+ MedCiudad Varchar (15) not null, )
+
+#Modificaciones a las Tablas
+
+ALTER TABLE <Universidad>
+    ADD (COLUMN) <Ciudad> <textarea>
+    <Restricción>
+    ADD(CONSTRAINT) <Nombre_restricción> <tipo_restricción>
+    <texto_restricción>
+    DROP (COLUMN) <Nombre_ de_la_columna>
+    DROP (CONSTRAINT) <Nombre_de_la_restricción>
+
+
+#Eliminación de Tablas
+
+DROP TABLE <Universidad>
+
+
+#Inserción de datos
+
+INSERT INTO <Universidad> (<Ciudad>,) VALUES (Bogota,Soacha,Medellin)
+
+
+#Modificación de Datos
+
+UPDATE <Universidad>
+    SET <Ciudad > = <Documento>
+    WHERE <condición>
+
+
+#Eliminación de Registros
+
+DELETE
+FROM <Universidad>
+WHERE <condición>
+
+#Consulta de datos
+
+SELECT <Ciudad> o <lista de columnas>
+    FROM <Universidad>
+
+        
